@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Remoção de Entulho</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-row>
+    <ion-col>
+
+    </ion-col>
+    <ion-col size="8">
+      <div align="center" style="color: white; font-weight: 600;">
+        <br>
+        <img src="../../assets/img/coleta.png" height="80px" alt=""><br>
+        <p style="font-size:large;"> Coleta de Entulho</p>
+      </div>
+    </ion-col>
+    <ion-col>
+
+    </ion-col>
+  </ion-row>
+  <div class="fundo">
+
+    <form>
+
+      <ion-item color="tertiary">
+        <ion-label color="light" position="floating">
+          <p calss="nform">
+            <ion-icon name="home"></ion-icon> Bairro:
+        </ion-label>
+        <ion-input type="text" required [(ngModel)]="pedido.bairro" name="bairro"></ion-input>
+      </ion-item>
+
+      <ion-item color="tertiary">
+        <ion-label color="light" position="floating">
+          <p calss="nform">
+            <ion-icon name="chatboxes"></ion-icon>Descrição:
+        </ion-label>
+        <ion-textarea name="descricao" required [(ngModel)]="pedido.descricao"></ion-textarea>
+
+      </ion-item>
+
+      <ion-item color="tertiary">
+        <ion-label color="light" position="floating">
+          <p calss="nform">
+            <ion-icon name="map"></ion-icon> Endereço:
+        </ion-label>
+        <ion-input type="text" name="endereco" [(ngModel)]="pedido.endereco" required></ion-input>
+      </ion-item>
+
+      <ion-item color="tertiary">
+        <ion-label color="light" position="floating">
+          <p calss="nform">
+            <ion-icon name="add"></ion-icon>Referencia:
+        </ion-label>
+        <ion-input type="text" name="referencia" [(ngModel)]="pedido.referencia" required></ion-input>
+      </ion-item>
+
+
+
+
+      <div id="map" style="height: 200px;width:100%;display:none;">
+        <p class="horario-i" style = "color:white">
+          <ion-icon name="images"></ion-icon> Localização
+        </p>
+      </div>
+      <div style = "display:none" id = "galeria">
+        <p class="horario-i" style = "color:white">
+          <ion-icon name="images"></ion-icon> Foto do Local
+        </p>
+        <img src="{{photo}}" width="100%" style="box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);">
+
+      </div>
+      <div align="center">
+        <!--<iframe src="https://www.google.com/maps/embed/v1/view?key=AIzaSyA0SYsQ3QPqibckta8N39YLGw3qTnHXASY&center={{log}},{{lat}}&zoom=18&maptype=satellite" frameborder="0"></iframe>-->
+      </div>
+      <br>
+      <ion-row>
+        <ion-col>
+          <div align="center">
+            <ion-button fill="outline" color="success" (click)='tirarFoto()'>
+              <ion-icon name="camera"></ion-icon> 
+            </ion-button>
+
+          </div>
+        </ion-col>
+        <ion-col>
+          <div align="center">
+            <ion-button fill="outline" color="success" (click)='escolher_foto()'>
+              <ion-icon name="photos"></ion-icon> 
+            </ion-button>
+
+          </div>
+        </ion-col>
+        <ion-col>
+          <div align="center">
+            <ion-button fill="outline" color="success" (click)="mostrarmapa()">
+              <ion-icon name="pin"></ion-icon> 
+            </ion-button>
+          </div>
+        </ion-col>
+
+      </ion-row>
+
+      <br><br>
+
+      <ion-button fill="outline" color="warning" expand="block" (click)="solicitacao(this.pedido)">
+
+        Enviar
+      </ion-button>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Veja todos os anúncios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item class = "linha2"  color = "tertiary"  *ngFor="let anuncio of anuncios " >
+   <div>
+    <h4> Publicado: {{anuncio.dataanuncio |  date:'dd-MM-yyyy'}}</h4>
+    <img src="{{anuncio.img}}" width="100%" style="box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);">
+    <Br>
+    </div>
+    </ion-item>
+   
+
+  </ion-content>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">54.232.202.93</domain>
+        <domain includeSubdomains="true">tucurui.pa.gov.br</domain>
+        <domain includeSubdomains="true">sipwebtucurui.ddns.net:8080</domain>
+    </domain-config>
+</network-security-config>

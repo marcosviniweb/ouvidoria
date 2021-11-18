@@ -1,0 +1,74 @@
+<ion-app>
+  <ion-menu side="start" menuId="first" contentId="content1">
+    
+      <ion-content >
+        <h2>Menu</h2>
+        <ion-list class="bg-transparent" >
+        <ion-menu-toggle style="background-color: rgba(255, 255, 255, 0.0);" color = "tertiary"  auto-hide="true">
+         <!--  <ion-item style="color: white" color = "tertiary"  [routerLink]="pages.url" routerDirection="forward">
+             <ion-icon style="color: white"  [name]="pages.icon" slot="start"></ion-icon>
+                 {{pages.title}} 
+          </ion-item>-->
+          <ion-item style="color: white" color = "tertiary" [routerLink]="['/home']" routerDirection="forward">
+            <ion-icon style="color: white"  name="home" slot="start"></ion-icon>
+        
+            Home
+          </ion-item>
+          <ion-item style="color: white" color = "tertiary" [routerLink]="['/perfil']" routerDirection="forward">
+            <ion-icon style="color: white"  name="person" slot="start"></ion-icon>
+            
+            Perfil 
+          </ion-item>
+          <ion-item style="color: white" color = "tertiary" [routerLink]="['/contracheque']" routerDirection="forward">
+            <ion-icon style="color: white"  name="document" slot="start"></ion-icon>
+            
+           Contra-Cheque
+          </ion-item>
+
+          <ion-item style="color: white" color = "tertiary" [routerLink]="['/anuncios']" routerDirection="forward">
+            <ion-icon style="color: white"  name="ios-calendar" slot="start"></ion-icon>
+            
+            Anúncios
+          </ion-item>
+          <ion-item style="color: white" color = "tertiary" [routerLink]="['/meusregistros']" routerDirection="forward">
+            <ion-icon style="color: white"  name="list" slot="start"></ion-icon>
+            
+            Meus Registros
+          </ion-item>
+          <ion-item style="color: white" color = "tertiary" [routerLink]="['/registrog']" routerDirection="forward">
+            <ion-icon style="color: white"  name="list-box" slot="start"></ion-icon>
+            
+           Registros Gerais
+          </ion-item>
+          <ion-item style="color: white" color = "tertiary" [routerLink]="['/emergencia']" routerDirection="forward">
+            <ion-icon style="color: white"  name="call" slot="start"></ion-icon>
+            
+           Emergência
+          </ion-item>
+          <ion-item style="color: white" color = "tertiary" [routerLink]="['/videos']" routerDirection="forward">
+            <ion-icon style="color: white"  name="play" slot="start"></ion-icon>
+          
+            
+           Vídeos
+          </ion-item>
+
+          <a href="https://api.whatsapp.com/send?phone=5594992805139&amp;text=Olá estou entrando em contato a partir do aplicativo! ">
+            <ion-item style="color: white" color = "tertiary"  routerDirection="forward">
+              <ion-icon style="color: white"  name="logo-whatsapp" slot="start"></ion-icon>
+              
+             Whastapp
+            </ion-item>
+          
+          </a>
+         
+          <ion-item style="color: white" color = "tertiary" (click) = "logout()" routerDirection="forward">
+            <ion-icon style="color: white"  name="arrow-round-back" slot="start"></ion-icon>
+            
+           Logout
+          </ion-item>
+        </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+<ion-router-outlet id="content1"></ion-router-outlet>
+</ion-app>

@@ -1,0 +1,71 @@
+
+<ion-header>
+  <ion-toolbar color = "primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalhes da Soliticitação</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <div >
+  
+    <ion-list class = "fundo" style=" border-radius:10px ; " >
+      <!--  <ion-list-header>
+        <p calss = "semana"> <ion-icon ios="ios-time" md="md-time"></ion-icon> Dia  {{minDate | date: 'dd' }}  -  {{minDate | date: 'EEEE' }}  </p>
+        </ion-list-header>--> 
+        <ion-item   color = "tertiary"  *ngFor="let registro of registros " >
+        <div > 
+          <div align = "center">
+          <h4>{{registro.categoria}} </h4>
+        </div>
+        <div align = "center"><b> Situação </b></div>   <ion-button fill="outline" *ngIf="registro.situacao == 'Aberto'" color="warning" expand="block" >{{registro.situacao }}</ion-button>
+        <ion-button fill="outline" *ngIf="registro.situacao == 'Executado'" color="success" expand="block" >{{registro.situacao }}</ion-button>
+        <ion-button fill="outline" *ngIf="registro.situacao == 'Cancelado'" color="medium" expand="block" >{{registro.situacao }}</ion-button>
+        <ion-button fill="outline" *ngIf="registro.situacao == 'Aguardando'" color="secondary" expand="block" >{{registro.situacao }}</ion-button>
+     
+               
+        <p class = "horario"  ><ion-icon name="chatboxes"></ion-icon> N° Protocolo: {{registro.protocolo  }} </p>
+        <p class = "nome"  >  <ion-icon name="home"></ion-icon> Data de inclusão : {{registro.data |   date:'dd-MM-yyyy'}} às {{registro.data |  date:'HH:mm'}}</p> 
+        <p class = "horario-i"> <ion-icon name="map"></ion-icon> Endereço : {{registro.endereco }}  </p> 
+        <p class = "horario-i"> <ion-icon name="map"></ion-icon> Descrição : {{registro.descricao }}  </p> 
+        <p class = "horario"> <ion-icon name="add"></ion-icon> Referencia: {{registro.referencia }} </p> 
+        <p style="background-color: brown; padding: 5px; border-radius: 10px ;" class = "horario"> <ion-icon name="add"></ion-icon> Observacão: {{registro.obs }} </p> 
+        
+        <ion-list class = "fundointerno" *ngIf = "!registro">
+                      
+          <h2>
+             
+                 <ion-skeleton-text color = "tertiary"  animated style =" height : 400px;  width: 100%; color: white;"> </ion-skeleton-text>
+               </h2>
+                                                    
+           
+           </ion-list>
+          
+
+          <img src="{{registro.img}}" width="100%" style = "box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);">
+          <p class = "horario-i">   <ion-icon name="images"></ion-icon> Foto do Local  </p> 
+          <div align = "center">
+        <ion-button fill="outline" (click) = "mostrarmapa()" [routerLink]="['/detalhes', registro]" color="secondary"  >Ver Localização no GPS</ion-button>
+      </div>
+        <br>
+        <div id="map" style="height: 400px;width:100%;display:none;">
+        </div>
+             
+                </div>
+                <div>
+               
+               
+  
+                  <!--<ion-button fill="outline" color="dark" expand="block" (click)="deletarAgenda(agenda.iddata, agenda.id)" >Cancelar</ion-button>
+                 
+                   -->
+                </div>
+              
+                </ion-item>
+               
+    </ion-list>
+     
+   </div>
+  
+</ion-content>

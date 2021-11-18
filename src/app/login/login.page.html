@@ -1,0 +1,91 @@
+
+
+<ion-content>
+ 
+
+ 
+  <ion-row align = "center">
+    <Br><Br><br> <Br><Br><br>
+      <img height = "20px" class = "pulse" src = "../../assets/img/logo.png"/><br>
+ <br>
+   </ion-row>
+  
+   <div  align = "center">
+    
+
+      <div class = "divlogin">
+          <ion-segment (ionChange)="segmentChanged($event)" mode="ios" value="login">
+              <ion-segment-button mode="ios" value="login">
+                <p> Cadastro</p>
+              
+              </ion-segment-button>
+              <ion-segment-button mode="ios" value="register">
+                <p>Login</p>
+              </ion-segment-button>
+            </ion-segment>
+        <ion-slides>
+            <ion-slide>
+                <div class="slide-inner ion-padding">
+                  <span>Cadastro</span>
+                  <ion-item>
+                    <ion-label><p calss = "nform"> <ion-icon name="person"></ion-icon> </ion-label>
+                    <ion-input type="text" name="title" placeholder = "Nome: " [(ngModel)] = "userRegister.nome" required></ion-input>
+                  </ion-item>
+                          <ion-item>
+                    <ion-label><p calss = "nform"> <ion-icon name="mail"></ion-icon> </ion-label>
+                    <ion-input type="email" name="title" placeholder = "E-mail: " [(ngModel)] = "userRegister.email" required></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label><p calss = "nform"><ion-icon name="calendar"></ion-icon></ion-label>
+                    <ion-input type="text" placeholder  = "Telefone: " [(ngModel)] = "userRegister.telefone" [brmasker]="{phone: true}" required></ion-input>
+                  </ion-item>
+                  
+                  <!-- or with standalone set to true -->
+                  
+                  <ion-item>
+                    <ion-label><p calss = "nform"><ion-icon name="man"></ion-icon> </ion-label>
+                      <ion-input type="text"  placeholder = "CPF ou CNPJ"  [(ngModel)] = "userRegister.cpf"  [brmasker]="{person: true}" required> </ion-input>
+                    </ion-item>
+                  
+                  <ion-item>
+                    <ion-label><p calss = "nform"><ion-icon name="lock"></ion-icon></ion-label>
+                    <ion-input type="password" placeholder = "Senha: " [(ngModel)] = "userRegister.password" required></ion-input>
+                  </ion-item>
+                  
+                  
+        <ion-button fill="outline" expand="block"  (click) = "register(userRegister)" >
+
+                    Cadastrar
+                  </ion-button>
+                </div>
+              </ion-slide>
+          <ion-slide>
+            <div class="slide-inner ion-padding">
+              <span>Login</span>
+      
+              <ion-item class="ion-margin-top" lines="none">
+                  <ion-label><p calss = "nform"> <ion-icon name="mail"></ion-icon> </ion-label>
+                <ion-input type="email" placeholder="E-mail" [(ngModel)]="userLogin.email"></ion-input>
+              </ion-item>
+      
+              <ion-item class="ion-margin-top" lines="none">
+                  <ion-label><p calss = "nform"><ion-icon name="lock"></ion-icon></ion-label>
+                <ion-input type="password" placeholder="Senha" [(ngModel)]="userLogin.password"></ion-input>
+              </ion-item>
+      <br><Br>
+              <ion-button  shape="round" color="primary" expand="full" (click) = "login() " >
+              Entrar
+              </ion-button><br>
+              <ion-button fill="outline" expand="block" (click) = "senha()" >
+                Esqueci minha senha
+                </ion-button>
+            </div>
+          </ion-slide>
+      
+          
+        </ion-slides>
+      
+      </div>
+   </div>
+   <br><br><br>
+</ion-content>

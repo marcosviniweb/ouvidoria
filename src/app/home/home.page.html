@@ -1,0 +1,310 @@
+
+
+
+<ion-content   >
+ 
+<div class = "imgtopo">
+
+
+  <ion-row  color = "light" class = "topo">
+    <ion-col size = "3">
+      <button (click) = "abrirmenu()" style ="background-color: rgba(0, 0, 0, 0.0);  color: white;"  ion-button menuToggle>
+        <ion-icon  style="color: #002960; font-size: 35px; margin-top: 20px;" name="menu"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col size = "6">
+     <img height = "80px" src="../../assets/img/logo.png" alt="">
+    </ion-col>
+    <ion-col >
+
+    </ion-col>
+  </ion-row>
+</div>
+
+
+  <super-tabs color = "tertiary">
+  
+    <super-tabs-toolbar class = "imgtopo" slot="top">
+      <super-tab-button><div align = "center" style="color: #002960; margin-top: 5px;padding-bottom: 10px;">
+        <ion-icon style = "font-size: 20px;" name = "map" color = "secondary"></ion-icon><br>
+        <ion-label style = "color: #002960"><b> Novo Registro</b> </ion-label>
+      </div>
+      </super-tab-button>
+      <super-tab-button>
+        <div align = "center" style="color: #002960; margin-top: 5px;padding-bottom: 10px;">
+          <ion-icon style = "font-size: 20px;" name = "list" color = "secondary"></ion-icon><br>
+          <ion-label style = "color: #002960"><b> Meus Registros </b> </ion-label>
+        </div>
+      </super-tab-button>
+      <super-tab-button>
+        <div align = "center" style="color: #002960; margin-top: 5px; padding-bottom: 10px;">
+          <ion-icon style = "font-size: 20px;" name = "list-box" color = "secondary"></ion-icon><br>
+          <ion-label style = "color: #002960"><b>Registros Gerais </b> </ion-label>
+        </div>
+      </super-tab-button>
+
+
+    </super-tabs-toolbar>
+    
+    <super-tabs-container>
+      <super-tab>
+        <ion-content>
+          <div class = "fundobranco">
+          
+            <ion-row>
+              <ion-col align="center" [routerLink]="['/remocao']">
+          
+               <img  src="../../assets/img/coleta.png" height="80px" alt="">
+               <p><B>REMOÇÃO DE ENTULHO</B></p>
+          
+              </ion-col>
+           
+              <ion-col  align = "center" [routerLink]="['/focodoenca']" >
+            
+                  <img  src="../../assets/img/dengue.png"   height="80px" alt="">
+                  <p><B>FOCO DE DOENÇA</B></p>
+                
+              </ion-col>
+                 <ion-col align="center"  [routerLink]="['/saneamento']">
+            
+               <img  src="../../assets/img/Icone_torneiras.png"  height="80px" alt="">
+               <p><B> SANEAMENTO </B></p>
+            
+              </ion-col>
+            </ion-row>
+            <ion-row>
+               <ion-col align = "center" [routerLink]="['/problemasaude']">
+               
+                  <img  align = "center"   src="../../assets/img/saude.png" height="80px" alt="">
+                  <p style = "text-align: center;"><B> SAÚDE</B></p>
+                 
+              </ion-col>
+           
+              <ion-col  align="center" [routerLink]="['/alagamento']">
+                
+                  <img  src="../../assets/img/alagamento.png"    height="80px" alt="">
+                  <p><B> ALAGAMENTO</B></p>
+                 
+              </ion-col>
+              <ion-col align="center" [routerLink]="['/seguranca']">
+
+                
+                    <img  src="../../assets/img/seg.png"    height="80px" alt="">
+                    <p><B>SEGURANÇA</B></p>
+                  
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col align="center" [routerLink]="['/buracos']" >
+              
+               <img  src="../../assets/img/buracos.png"  height="80px" alt="">
+               <p><B>BURACOS E ASFALTAMENTO</B></p>
+              
+              </ion-col>
+              <ion-col align="center"  [routerLink]="['/iluminacao']">
+
+               
+                    <img  src="../../assets/img/ilumina.png"   height="80px" alt="">
+                    <p><B>ILUMINAÇÃO PÚBLICA</B></p>
+                   
+              </ion-col>
+              <ion-col align="center"  [routerLink]="['/limpeza']">
+               
+                  <img  src="../../assets/img/covid.png"   height="80px" alt="">
+                  <p><B>COVID</B></p>
+               
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col align="center" [routerLink]="['/fiscalizacao']">
+               
+               <img  src="../../assets/img/pred.png"   height="80px" alt="">
+               <p><B>FISCALIZAÇÃO </B></p>
+            
+              </ion-col>
+              <ion-col align="center" [routerLink]="['/arvores']">
+            
+                  <img  src="../../assets/img/arvores.png"    height="80px" alt="">
+                  <p><B>ÁRVORES</B></p>
+               
+              </ion-col>
+              <ion-col align="center"   [routerLink]="['/educacao']">
+               
+                  <img  src="../../assets/img/icon3.png" height="80px" alt="">
+                  <p><B>EDUCAÇÃO</B></p>
+                 
+              </ion-col>
+            </ion-row>
+        </div>
+       
+        </ion-content>
+      </super-tab>
+      <super-tab>
+        <ion-content>
+          <div style="color: white" align = "center">
+
+           </div>
+           <ion-list class = "fundobranco" style=" border-radius:10px ;"  >
+             <!--  <ion-list-header>
+               <p calss = "semana"> <ion-icon ios="ios-time" md="md-time"></ion-icon> Dia  {{minDate | date: 'dd' }}  -  {{minDate | date: 'EEEE' }}  </p>
+               </ion-list-header>-->
+               <ion-item class = "linha2" [routerLink]="['/detalhes', registro]" color = "tertiary"  *ngFor="let registro of registros " >
+               <div>
+                 <h4>{{registro.categoria}} </h4>
+
+                 <p class = "horario"  ><ion-icon name="chatboxes"></ion-icon> N° Protocolo: <b>{{registro.protocolo  }} </b></p>
+                   <p class = "nome"  >  <ion-icon name="clock"></ion-icon> Data de inclusão : {{registro.data |   date:'dd-MM-yyyy'}} às {{registro.data |  date:'HH:mm'}}</p>
+
+
+
+
+
+                         <!--  <p class = "horario-i"> <ion-icon name="map"></ion-icon> Descrição : {{registro.descricao }}  </p>
+                         <p class = "horario"> <ion-icon name="add"></ion-icon> Referencia: {{registro.referencia }} </p>
+                         -->
+
+
+
+                       </div>
+                       <div align = "center">
+                        
+                        Status <ion-button fill="outline" *ngIf="registro.situacao == 'Aberto'" color="warning" expand="block" >{{registro.situacao }}</ion-button>
+                        <ion-button fill="outline" *ngIf="registro.situacao == 'Executado'" color="success" expand="block" >{{registro.situacao }}</ion-button>
+                        <ion-button fill="outline" *ngIf="registro.situacao == 'Cancelado'" color="medium" expand="block" >{{registro.situacao }}</ion-button>
+                        <ion-button fill="outline" *ngIf="registro.situacao == 'Aguardando'" color="secondary" expand="block" >{{registro.situacao }}</ion-button>
+
+         <!--
+                      <ion-button fill="outline" color="dark" expand="block" (click)="deletarAgenda(agenda.iddata, agenda.id)" >Cancelar</ion-button>
+
+                          -->
+                       </div>
+
+                      
+                       </ion-item>
+
+                       <ion-list class = "fundointerno" *ngIf = "!registros.length">
+
+                       <h2>
+
+                              <ion-skeleton-text color = "tertiary"  animated style = "width: 80%; color: white;"> </ion-skeleton-text>
+                            </h2>
+
+                            <p>
+                              <ion-skeleton-text color = "tertiary"  animated style = "width: 70%; color: white;"> </ion-skeleton-text>
+                            </p>
+                            <p>
+                                <ion-skeleton-text color = "tertiary"  animated style = "width: 60%; color: white;"> </ion-skeleton-text>
+                              </p>
+                              <p>
+                                  <ion-skeleton-text  color = "tertiary"  animated style = "height: 30px; width: 100%; color: white;"> </ion-skeleton-text>
+                                </p>
+
+
+
+                        </ion-list>
+
+
+           </ion-list>
+
+
+
+           
+        </ion-content>
+      </super-tab>
+      <super-tab>
+        <ion-content>
+
+          <ion-list  class = "fundobranco" style=" border-radius:10px ;"   >
+            <!--  <ion-list-header>
+              <p calss = "semana"> <ion-icon ios="ios-time" md="md-time"></ion-icon> Dia  {{minDate | date: 'dd' }}  -  {{minDate | date: 'EEEE' }}  </p>
+              </ion-list-header>-->
+              <ion-item class = "linha2" [routerLink]="['/detalhes', registro]" color = "tertiary"  *ngFor="let registro of registrosg " >
+
+                <div>
+              
+                <h4>{{registro.categoria}} </h4>
+
+                <p class = "horario"  ><ion-icon name="chatboxes"></ion-icon>N° Protocolo:  <b>{{registro.protocolo  }} </b></p>
+                  <p class = "nome"  >  <ion-icon name="clock"></ion-icon> Data de inclusão : {{registro.data |   date:'dd-MM-yyyy'}} às {{registro.data |  date:'HH:mm'}}</p>
+
+
+
+                        <!--  <p class = "horario-i"> <ion-icon name="map"></ion-icon> Descrição : {{registro.descricao }}  </p>
+                        <p class = "horario"> <ion-icon name="add"></ion-icon> Referencia: {{registro.referencia }} </p>
+                        -->
+
+
+
+                      </div>
+                      <div align = "center">
+                       Status <ion-button fill="outline" *ngIf="registro.situacao == 'Aberto'" color="warning" expand="block" >{{registro.situacao }}</ion-button>
+                       <ion-button fill="outline" *ngIf="registro.situacao == 'Executado'" color="success" expand="block" >{{registro.situacao }}</ion-button>
+                       <ion-button fill="outline" *ngIf="registro.situacao == 'Cancelado'" color="medium" expand="block" >{{registro.situacao }}</ion-button>
+                       <ion-button fill="outline" *ngIf="registro.situacao == 'Aguardando'" color="secondary" expand="block" >{{registro.situacao }}</ion-button>
+                          <!-- <ion-button fill="outline" color="dark" expand="block" (click)="deletar(registro.data)" >Deletar</ion-button>
+
+
+                    <ion-button fill="outline" color="dark" expand="block" (click)="deletarAgenda(agenda.iddata, agenda.id)" >Cancelar</ion-button>
+
+                         -->
+                      </div>
+
+                      </ion-item>
+                      <ion-list class = "fundointerno" *ngIf = "!registros.length">
+
+                        <h2>
+
+                               <ion-skeleton-text color = "tertiary"  animated style = "width: 80%; color: white;"> </ion-skeleton-text>
+                             </h2>
+
+                             <p>
+                               <ion-skeleton-text color = "tertiary"  animated style = "width: 70%; color: white;"> </ion-skeleton-text>
+                             </p>
+                             <p>
+                                 <ion-skeleton-text color = "tertiary"  animated style = "width: 60%; color: white;"> </ion-skeleton-text>
+                               </p>
+                               <p>
+                                   <ion-skeleton-text  color = "tertiary"  animated style = "height: 30px; width: 100%; color: white;"> </ion-skeleton-text>
+                                 </p>
+
+
+
+                         </ion-list>
+
+          </ion-list>
+
+
+
+
+
+
+        </ion-content>
+      </super-tab>
+
+    </super-tabs-container>
+
+  </super-tabs>
+  <!--
+  <div>   <ion-button fill="outline" color = "light" expand="block"  >
+  Anúncios do Aplicativo
+    </ion-button> </div>
+    
+  <ion-slides [routerLink]="['/anuncios']">
+    <ion-slide *ngFor="let anuncio of anuncios " >
+      <img src="{{anuncio.img}}" width="100%" style="box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);">
+
+      </ion-slide>
+     
+      </ion-slides>
+      <ion-list style = "height: 300px; margin-top: -50px;" class = "fundointerno" *ngIf = "!anuncios.length">
+
+       
+               <p>
+                   <ion-skeleton-text  color = "tertiary"  animated style = "height: 300px; width: 100%; color: white;"> </ion-skeleton-text>
+                 </p>
+
+
+
+         </ion-list>
+         -->
+</ion-content>

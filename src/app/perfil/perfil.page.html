@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Dados do Usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row>
+    <ion-col>
+     
+    </ion-col>
+    <ion-col size = "8" >
+     <div align = "center" style = "color: white; font-weight: 600;">
+       <br>
+     <img src="../../assets/img/no-avt.png" height="80px" alt=""><br>
+
+    </div>
+    </ion-col>
+    <ion-col >
+    
+    </ion-col>
+  </ion-row>
+
+  <ion-list  align = "center" style = "width: 100%;"  class = "fundo" style=" border-radius:10px ; " >
+    <!--  <ion-list-header>
+      <p calss = "semana"> <ion-icon ios="ios-time" md="md-time"></ion-icon> Dia  {{minDate | date: 'dd' }}  -  {{minDate | date: 'EEEE' }}  </p>
+      </ion-list-header>--> 
+
+      <ion-item  expand="full"  align = "center" style = "width: 100%;"  color = "tertiary"  *ngFor="let dado of dados " >
+     
+        <div align = "center" style = "width: 100%;"  >
+    
+     
+      
+     
+      <ion-item  class = "campo" color="dark" style = "width: 90%;">
+        <ion-label><p calss = "nform"> <ion-icon name="person"></ion-icon> </ion-label>
+        <ion-input style = "width: 100%;" type="text" name="title" placeholder = "Nome: " [(ngModel)] = "dado.nome" required></ion-input>
+      </ion-item>
+              <ion-item  class = "campo" color="dark" style = "width: 90%;">
+        <ion-label><p calss = "nform"> <ion-icon name="mail"></ion-icon> </ion-label>
+        <ion-input type="email" name="title" placeholder = "E-mail: " [(ngModel)] = "dado.email" required></ion-input>
+      </ion-item>
+      <ion-item  class = "campo" color="dark" style = "width: 90%;">
+        <ion-label><p calss = "nform"><ion-icon name="calendar"></ion-icon></ion-label>
+        <ion-input type="text" placeholder  = "Telefone: " [(ngModel)] = "dado.telefone" required></ion-input>
+      </ion-item>
+      
+      <!-- or with standalone set to true -->
+      
+      <ion-item class = "campo" color="dark" style = "width: 90%;">
+        <ion-label><p calss = "nform"><ion-icon name="man"></ion-icon> </ion-label>
+        <ion-input type="text" placeholder = "CPF ou CNPJ" [(ngModel)] = "dado.cpf"  required> </ion-input>
+      </ion-item>
+    
+   
+      <ion-list class = "fundointerno" *ngIf = "!dado">
+                    
+        <h2>
+           
+               <ion-skeleton-text color = "tertiary"  animated style =" height : 400px;  width: 100%; color: white;"> </ion-skeleton-text>
+             </h2>
+                                                  
+         
+         </ion-list>
+      <br>
+     
+             
+
+                <!--<ion-button fill="outline" color="dark" expand="block" (click)="deletarAgenda(agenda.iddata, agenda.id)" >Cancelar</ion-button>
+               
+                 -->
+                 <ion-button   fill="outline" color="success" expand="block" (click) = "atualizar(dado.cpf, dado.nome, dado.telefone, dado.email) " >
+                  Editar
+                  </ion-button>
+              
+                </div >
+              </ion-item>
+            
+  </ion-list>
+ 
+</ion-content>

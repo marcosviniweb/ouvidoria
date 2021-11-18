@@ -1,0 +1,22 @@
+h2{
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid white;
+}
+.bg-transparent {
+    background: transparent;
+    --background: transparent;
+   
+  }
+
+    ion-content{
+        --background: rgba(255, 255, 255, 0.0);
+        --background: transparent;
+    --ion-color-base: transparent !important;
+    }
+   
+
+  .menu-inner{
+    --background: rgba(255, 255, 255, 0.0);
+    }

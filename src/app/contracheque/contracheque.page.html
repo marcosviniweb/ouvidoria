@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Contra Cheque</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item   *ngFor="let contra of contracheque " >
+    <div id="iframe1" [innerHtml]="url"></div>
+  </ion-item>
+  <!--
+  <iframe id="iframe1" src="http://tucurui.pa.gov.br/contracheque.html" width="400px" height="800px"></iframe>-->
+</ion-content>
+
+

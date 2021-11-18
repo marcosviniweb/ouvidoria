@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registros Gerais</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div style="color: white" align = "center">
+          
+  </div>
+  <ion-list class = "fundobranco" style=" border-radius:10px ;"  >
+    <!--  <ion-list-header>
+      <p calss = "semana"> <ion-icon ios="ios-time" md="md-time"></ion-icon> Dia  {{minDate | date: 'dd' }}  -  {{minDate | date: 'EEEE' }}  </p>
+      </ion-list-header>--> 
+      <ion-item class = "linha2" [routerLink]="['/detalhes', registro]" color = "tertiary"  *ngFor="let registro of registrosg " >
+      <div> 
+        <h4>{{registro.categoria}} </h4>
+
+        <p class = "horario"  ><ion-icon name="chatboxes"></ion-icon> N° Protocolo: <b>{{registro.protocolo  }} </b></p>
+          <p class = "nome"  >  <ion-icon name="clock"></ion-icon> Data de inclusão : {{registro.data |   date:'dd-MM-yyyy'}} às {{registro.data |  date:'HH:mm'}}</p> 
+          
+      
+            
+       
+       
+                <!--  <p class = "horario-i"> <ion-icon name="map"></ion-icon> Descrição : {{registro.descricao }}  </p> 
+                <p class = "horario"> <ion-icon name="add"></ion-icon> Referencia: {{registro.referencia }} </p> 
+                -->
+          
+             
+             
+              </div>
+              <div align = "center">
+               Status <ion-button fill="outline" *ngIf="registro.situacao == 'Aberto'" color="warning" expand="block" >{{registro.situacao }}</ion-button>
+               <ion-button fill="outline" *ngIf="registro.situacao == 'Executado'" color="success" expand="block" >{{registro.situacao }}</ion-button>
+               <ion-button fill="outline" *ngIf="registro.situacao == 'Cancelado'" color="medium" expand="block" >{{registro.situacao }}</ion-button>
+               <ion-button fill="outline" *ngIf="registro.situacao == 'Aguardando'" color="secondary" expand="block" >{{registro.situacao }}</ion-button>
+    
+<!--
+             <ion-button fill="outline" color="dark" expand="block" (click)="deletarAgenda(agenda.iddata, agenda.id)" >Cancelar</ion-button>
+               
+                 -->
+              </div>
+            
+              </ion-item>
+             
+              <ion-list class = "fundointerno" *ngIf = "!registros.length">
+             
+              <h2>
+                 
+                     <ion-skeleton-text color = "tertiary"  animated style = "width: 80%; color: white;"> </ion-skeleton-text>
+                   </h2>
+                
+                   <p>
+                     <ion-skeleton-text color = "tertiary"  animated style = "width: 70%; color: white;"> </ion-skeleton-text>
+                   </p>
+                   <p>
+                       <ion-skeleton-text color = "tertiary"  animated style = "width: 60%; color: white;"> </ion-skeleton-text>
+                     </p>
+                     <p>
+                         <ion-skeleton-text  color = "tertiary"  animated style = "height: 30px; width: 100%; color: white;"> </ion-skeleton-text>
+                       </p>
+                     
+               
+               
+               </ion-list>
+
+               
+  </ion-list>
+</ion-content>

@@ -1,0 +1,15 @@
+ion-item{
+    --background-color: blue;
+}
+
+.fundo{
+    ::placeholder {
+        font-size: 12px; //sets placeholder font size
+        color:black
+      }
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    
+}

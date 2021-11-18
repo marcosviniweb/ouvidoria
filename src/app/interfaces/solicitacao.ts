@@ -1,0 +1,16 @@
+export interface Solicitacao {
+    id ?:string ,
+    bairro?:string ,
+    categoria?:string ,
+    descricao?:string ,
+    secretaria?:string ,
+    dia?:string ,
+    data?:string ,
+    protocolo?:string ,
+    situacao?:string ,
+    endereco?:string ,
+    tipo?:string ,
+    referencia?:string ,
+    latitude?: string,
+    longitude?: string,
+}
