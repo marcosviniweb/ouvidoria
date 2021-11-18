@@ -5,13 +5,7 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyCUfGlwFPRdkaLGemCLQ0OCPQUVwREiVmU",
-    authDomain: "app-prefeitura.firebaseapp.com",
-    databaseURL: "https://app-prefeitura.firebaseio.com",
-    projectId: "app-prefeitura",
-    storageBucket: "app-prefeitura.appspot.com",
-    messagingSenderId: "1010341165116",
-    appId: "1:1010341165116:web:7753a6ca5c89199617eb39"
+   
   }
 };
 
