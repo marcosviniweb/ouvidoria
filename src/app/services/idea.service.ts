@@ -98,10 +98,10 @@ var ordenacao =  this.afs.collection<Idea>( "Solicitacoes", ref => ref.where('pr
       })
     );
     let usuario = user.toString();
-    var dados =  this.afs.collection<Idea>( "Usuários", ref => ref.where('id', '==', usuario)).valueChanges()
+    var dadosuser =  this.afs.collection<Idea>( "Usuários", ref => ref.where('id', '==', usuario)).valueChanges()
   
  
-    return dados;
+    return dadosuser;
   }
 
   pegarAnuncios(): Observable<Idea[]>{
