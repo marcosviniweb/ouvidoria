@@ -194,9 +194,6 @@ var ordenacao =  this.afs.collection<Idea>( "Solicitacoes", ref => ref.where('pr
  
     return dados;
   }
- // updateIdea(idea: Idea): Promise<void> {
-  //  return this.ideaCollection.doc(idea.id).update({ dia: idea.dia, nome: idea.nome , assunto: idea.assunto});
- //}
 
   deleteIdea(data: string) {
     return this.afs.collection<Idea>("Solicitacoes/").doc(data).delete()
