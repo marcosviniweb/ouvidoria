@@ -197,6 +197,6 @@ var ordenacao =  this.afs.collection<Idea>( "Solicitacoes", ref => ref.where('pr
 
   deleteIdea(data: string) {
     return this.afs.collection<Idea>("Solicitacoes/").doc(data).delete()
-  //  return this.ideaCollection.doc(data).delete();
+  
   }
 }
